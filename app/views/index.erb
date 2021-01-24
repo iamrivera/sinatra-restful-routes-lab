@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+
+    <h1> Welcome to the Recipe Registry </h1>
+    <% @recipes.each do |recipe| %>
+        <% recipe_link = "/recipes/#{recipe.id}" %>
+        <p><a href="<%= recipe_link %>"><%= recipe.name %></a></p>
+        <% end %>
+    <a href="/recipes/new">Create New Recipe</a>
+</html>
